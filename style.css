@@ -61,9 +61,8 @@ body{
 .container{
     width: 400px;
     height: min-content;
-    background-color: #fff;
     border-radius: 12px;
     padding: 28px;
+    background: url("assets/bg.jpg");
     background-size: cover;
 }
-
