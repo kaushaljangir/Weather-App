@@ -146,3 +146,20 @@ body{
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+.location-not-found{
+    margin-top: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-not-found h3{
+    color: #00000075;
+}
+
+.location-not-found img{
+    width: 80%;
+    filter: drop-shadow(2px 1px rgba(0,0,0,0.6));
+}
