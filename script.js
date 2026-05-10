@@ -16,12 +16,13 @@ async function checkWeather(city){
     const weather_data = await fetch(`${url}`).then(response =>
     response.json());
 
-    if(weather_data.cod === "404"){
+    if(weather_data.cod === "404" || inputBox.value === ""){
         location_not_found.style.display = "flex";
         weather_body.style.display = "none";
         console.log("error");
         return;
     }
+
     location_not_found.style.display = "none";
     weather_body.style.display = "flex";
 
