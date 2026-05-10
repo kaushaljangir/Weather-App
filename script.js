@@ -19,6 +19,43 @@ async function checkWeather(city){
 
     humidity.textContent =  `${weather_data.main.humidity}%`;
     windSpeed.textContent = `${weather_data.wind.speed}km/H`;
+
+    console.log(weather_data.weather[0].main);
+    switch(weather_data.weather[0].main){
+        case "Clouds":
+            weatherImg.src = "assets/weather/clouds.svg";
+            break;
+        case "Clear":
+            weatherImg.src = "assets/weather/clear.svg";
+            break;
+        case "Rain":
+            weatherImg.src = "assets/weather/rain.svg";
+            break;
+        case "Drizzle":
+            weatherImg.src = "assets/weather/drizzle.svg";
+            break;
+        case "Snow":
+            weatherImg.src = "assets/weather/snow.svg";
+            break;
+        case "Atmosphere":
+            weatherImg.src = "assets/weather/Atmosphere.svg";
+            break;
+        case "Thunderstorm":
+            weatherImg.src = "assets/weather/thunderstorm.svg";
+            break;
+        case "Snow":
+            weatherImg.src = "assets/weather/snow.svg";
+            break;
+        case "Mist":
+            weatherImg.src = "assets/weather/mist.png";
+            break;
+        case "Haze":
+            weatherImg.src = "assets/weather/haze.png";
+            break;
+
+        default:
+            weatherImg.alt = "weather img";
+    }
 }
 
 searchBtn.addEventListener("click", (e) => {
