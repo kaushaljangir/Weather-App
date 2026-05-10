@@ -7,6 +7,7 @@ const humidity = document.querySelector("#humidity");
 const windSpeed = document.querySelector("#wind-speed");
 
 const location_not_found = document.querySelector(".location-not-found");
+const weather_body = document.querySelector(".weather-body");
 
 async function checkWeather(city){
     const api_key = "c98a562e46e4c048d51cced7ac2781b1";
@@ -17,9 +18,12 @@ async function checkWeather(city){
 
     if(weather_data.cod === "404"){
         location_not_found.style.display = "flex";
+        weather_body.style.display = "none";
         console.log("error");
         return;
     }
+    location_not_found.style.display = "none";
+    weather_body.style.display = "flex";
 
     temperature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}<sup>°C</sup>`;
 
