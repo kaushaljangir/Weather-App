@@ -33,7 +33,7 @@ The app fetches real-time weather data using a weather API and displays useful w
 
 ## 🔗 Live Demo
 
-[https://kaushaljangir.github.io/Weather-App/?]
+https://kaushaljangir.github.io/Weather-App/?
 
 ---
 
