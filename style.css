@@ -163,3 +163,30 @@ body{
     width: 80%;
     filter: drop-shadow(2px 1px rgba(0,0,0,0.6));
 }
+
+@media (max-width: 600px) {
+    .container{
+        margin-inline: 20px;
+    }
+
+    .weather-box .temperature{
+        font-size: 100px;
+    }
+
+    .weather-box .temperature sup{
+        font-size: 50px;
+    }
+
+    .humidity{
+        margin-left: 0px;
+    }
+
+    .wind{
+        margin-right: 0px;
+    }
+
+    .weather-box .description{
+        font-size: 30px;
+    }
+
+}
