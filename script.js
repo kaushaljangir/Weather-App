@@ -13,7 +13,12 @@ async function checkWeather(city){
     const weather_data = await fetch(`${url}`).then(response =>
     response.json());
 
-    console.log(weather_data);
+    temperature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}<sup>°C</sup>`;
+
+    description.textContent = `${weather_data.weather[0].description}`;
+
+    humidity.textContent =  `${weather_data.main.humidity}%`;
+    windSpeed.textContent = `${weather_data.wind.speed}km/H`;
 }
 
 searchBtn.addEventListener("click", (e) => {
